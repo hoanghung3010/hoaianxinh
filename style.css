@@ -4,6 +4,14 @@ body{
     position: relative;
     font-family: 'Open Sans', sans-serif;
 }
+
+
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 body::before{
     position: fixed;
     top:0;
@@ -25,11 +33,12 @@ body::before{
     left:50%;
     border-radius: 10px;
     transform: translate(-50%,-50%);
-    /* border: 10px solid; */
-  /* border-image-slice: 1; */
-  /* border-width: 3px; */
-    /* border-image-source:linear-gradient(105deg, rgb(255 46 144) 0%, rgb(61 35 185) 100%); */
-    /* transition: 0.5s; */
+    border: 10px solid;
+  border-image-slice: 1;
+  border-width: 3px;
+    border-image-source:linear-gradient(105deg, rgb(255 46 144) 0%, rgb(61 35 185) 100%);
+    transition: 0.5s;
+    border-radius: 30px;
 }
 .bg-rotate{
     position: absolute;
@@ -294,6 +303,7 @@ body::before{
     }
  }
  .content .item{
+    
     position: absolute;
     width: 200px;
     color: #fff;
@@ -301,7 +311,7 @@ body::before{
     text-shadow: 0 0 5px #0CD891;
     top: 40%;
     max-height: 0px;
-    left: 15%;
+    left: 8%;
     opacity: 0;
     transform: perspective(290px) rotate(-11deg) rotateY(29deg);
  }
@@ -311,8 +321,20 @@ body::before{
     font-family: 'Open Sans', sans-serif;
     text-shadow: 0 0 20px #0CD891;
  }
+ #content_0 {
+    text-align: center;
+ }
  .content .item p{
     font-size: small;
+ }
+ #content_1{
+    text-align: center;
+    font-size: 1rem;
+ }
+ #content_1 p {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #FF1493;
  }
  .content .item::before{
     position: absolute;
@@ -549,9 +571,11 @@ body::before{
     margin-left:20px;
 }
 .next{
-    position: absolute;
+    /* position: absolute; */
     bottom:40px;
-    right:40px;
+    /* right:40px; */
+    top: 30px;
+   text-align: center;
 }
 .next button{
     display: inline-block;
@@ -561,6 +585,16 @@ body::before{
     background-color: #FF1493;
     opacity: 0.3;
     border-radius: 20px;
+}
+#next {
+    font-size: 1rem;
+    font-weight: 600;
+    transition: all ease 1s;
+}
+
+#next:hover{
+    transition: all ease 1s;
+    background-color: #00ffff ;
 }
 @media only screen and (max-width: 768px) {
  .container{
